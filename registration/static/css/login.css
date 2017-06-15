@@ -1,0 +1,123 @@
+*{
+  font-family: 'Work Sans';
+}
+h1{
+  text-align: center;
+  font-weight: 200;
+}
+p{
+  text-align: center;
+  font-size: 150%;
+  font-weight: 300!important;
+}
+form{
+  padding: 0% 5%;
+}
+.login-left{
+  border-right: 1px solid #858f96;
+}
+.input-field input:focus + label {
+   color: #3899ec !important;
+ }
+ .row .input-field input:focus {
+   border-bottom: 1px solid #3899ec !important;
+   box-shadow: 0 1px 0 0 #3899ec !important
+ }
+ .input-field input[type="checkbox"].filled-in:checked + label:after{
+      border: 2px solid #3899ec;
+      background-color: #3899ec;
+ }
+.forgot{
+  margin-top: 25px;
+}
+.btn-custom:disabled{
+  color: grey;
+  border-color: grey;
+}
+.btn-custom{
+  padding: 2%;
+  width: 30%;
+  border-radius: 40px;
+  outline: none;
+  color: #3899ec;
+  background: white;
+  border: 1px solid #3899ec;
+  margin-top: 20px;
+  transition: 0.4s;
+}
+.btn-custom:hover, .btn-custom:active, .btn-custom:focus{
+  background: #4eb7f5;
+  color: white;
+  transition: 0.4s;
+}
+.btn-facebook, .btn-google{
+  width: 80%;
+  padding: 3% 0%;
+  margin-top: 60px;
+  margin-left: 25px;
+  background: white;
+  border: 1px solid;
+  transition: 0.4s;
+}
+.btn-facebook{
+  color: #3b5998;
+  border-color: #3b5998;
+}
+.btn-google{
+  border-color: red;
+}
+.facebook, .google{
+  margin-left: -25px;
+  margin-right: 25px;
+}
+.btn-google:hover, .btn-google:active, .btn-google:focus{
+  background: rgba(255,0,0,0.1);
+  transition: 0.4s;
+}
+.btn-facebook:hover, .btn-facebook:active, .btn-facebook:focus{
+  background: rgba(59,89,152, 0.1);
+  transition: 0.4s;
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 600px){
+  .login-left{
+    border: none;
+  }
+  .login-left .bt{
+    text-align: center;
+  }
+  .login-right .btn-facebook{
+    margin-top: 0px;
+  }
+  .btn-google{
+    margin-top: 30px;
+   }
+}
+
+@media only screen and (min-device-width: 700px) and (max-device-width: 1000px){
+  .btn-facebook, .btn-google{
+    width: 90%;
+    padding: 7% 0%;
+  }
+  .facebook, .google{
+    margin-left: -5px;
+    margin-right: 5px;
+  }
+  .btn-custom{
+    margin-left: -20%;
+  }
+}
+
+@media only screen and (min-device-width: 1023px) and (max-device-width: 1300px){
+  .facebook, .google{
+    margin-left: 0px;
+    margin-right: 5px;
+  }
+  .btn-facebook, .btn-google{
+    width: 90%;
+    padding: 7% 0%;
+  }
+  .btn-custom{
+    margin-left: -20%;
+  }
+}

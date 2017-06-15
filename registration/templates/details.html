@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+    <link rel="stylesheet" href='{% static "css/login.css" %}'>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/materialize.js'%}"></script>
+    <script src="{% static 'js/angular.min.js' %}"></script>
+    <script src="{% static 'js/angular-script.js' %}"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login Details</title>
+  </head>
+  <body ng-app="app" ng-controller="detailsController" id="details">
+    <div class="container">
+      <div class="row">
+        <h1>Tell us about you</h1>
+        <form method="POST" action="{% url 'companyinfo' %}" enctype="multipart/form-data">{% csrf_token %}
+          
+           <div class="input-field">
+            <h5>Company Name</h5>
+            <input type="checkbox" class="filled-in" ng-model="isImage" name="isImage" id="filled-in-box" checked="checked" />
+            <label for="filled-in-box">Is your company name an image?</label>
+          </div>
+          <div class="input-field" ng-if="isImage">
+            <br>
+            <h5>Company Name Image</h5>
+            <input id="id_company_name_image" type="file" class="validate" name="company_name_image">
+            <label for="id_company_name_image">Company Name</label>
+          </div>
+          <br>
+          <div class="input-field" ng-if="!isImage">
+            <input id="id_company_name" type="text" class="validate" name="company_name">
+            <label for="id_company_name">Company Name</label>
+          </div>
+          <div class="input-field">
+            <input id="id_company_url" name='company_url' type="url" class="validate">
+            <label for="id_company_url">Company Url</label>
+          </div>
+          <div class="input-field">
+            <input id="id_company_email" type="email"  name="company_email">
+            <label for="id_company_email">Email</label>
+          </div>
+          <div class="input-field">
+            <input id="id_company_mobile" type="number"  name="company_mobile">
+            <label for="id_company_mobile">Mobile Number</label>
+          </div>
+          <div >
+            <label for="id_company_logo" class="custom-file">Logo</label>
+            <input id="id_company_logo" type="file" class="custom-file-input" name="company_logo">
+            
+          </div>
+
+          
+          <div class="bt" style="text-align: center"><button class="btn-custom">Submit</button></div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
