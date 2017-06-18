@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/css/materialize.min.css">
+    <link rel="stylesheet" href="../static/css/joblist.css">
+    <link rel="stylesheet" href="../static/css/jobdashboard.css">
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/materialize.js"></script>
+    <script src="../static/js/angular.min.js"></script>
+    <script src="../static/js/angular-script.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Job Details | Recrutoo</title>
+  </head>
+  <body ng-app="app" ng-controller="jobListController" ng-init="getJobs()">
+    <div class="container">
+      <h1>Job Openings</h1>
+      <br><br><br><br><br>
+      <div class="row">
+        <ul class="collapsible" data-collapsible="accordion">
+          <li ng-repeat="category in categories">
+            <div class="collapsible-header"><b>{[{category}]}</b></div>
+            <div class="collapsible-body" ng-repeat="job in jobs | filter: category">
+              <div class="job container">
+                <b>{[{job.name}]}</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><span class="grey-text">City</span></b>
+                <a href="{[{job.slug}]}"><button class="btn-custom right hide-on-small-and-down">Learn More</button>
+                <p class="hide-on-med-and-up"><button class="btn-custom" ng-click="window.location=job.slug">Learn More</button></p></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+$(document).ready(function(){
+  $('.collapsible').collapsible();
+});
+</script>

@@ -1,0 +1,39 @@
+.collapsible-header b{
+  font-size: 130%!important;
+}
+.collapsible-body{
+  padding: 2%;
+  padding-bottom: 4%;
+}
+.collapsible-body .job b{
+  font-size: 150%!important;
+}
+.collapsible-body .job .grey-text{
+  font-size: 80%!important;
+}
+.btn-custom:disabled{
+  color: grey;
+  border-color: grey;
+}
+.btn-custom{
+  padding: 2%;
+  width: 30%;
+  border-radius: 40px;
+  outline: none;
+  color: #3899ec;
+  background: white;
+  border: 1px solid #3899ec;
+  transition: 0.4s;
+}
+.btn-custom:hover, .btn-custom:active, .btn-custom:focus{
+  background: #4eb7f5;
+  color: white;
+  transition: 0.4s;
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 600px){
+  .btn-custom{
+    margin: 0px;
+    width: 100%;
+  }
+}
