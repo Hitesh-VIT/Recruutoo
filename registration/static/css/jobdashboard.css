@@ -1,0 +1,32 @@
+*{
+  font-family: 'Work Sans';
+}
+h1{
+  text-align: center;
+  font-weight: 200;
+}
+p{
+  text-align: center;
+  font-size: 150%;
+  font-weight: 300!important;
+}
+form{
+  padding: 0% 5%;
+}
+
+.btn, .btn:active, .btn:focus{
+  background: #3899ec;
+}
+
+.tabs .tab a{
+  color: #3899ec!important;
+}
+.tabs .indicator{
+  background: #3899ec!important;
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 600px) {
+  .company-image{
+    width: 150%!important;
+  }
+}

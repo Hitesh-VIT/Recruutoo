@@ -13,5 +13,13 @@ app.controller('loginController', function($scope){
 });
 
 app.controller('detailsController', function($scope){
-  
+
 })
+
+app.controller('addJobController', function($scope){
+
+})
+
+app.controller('jobDashboardController', function($scope){
+  
+});

@@ -65,9 +65,9 @@ form{
 }
 .btn-google{
   border-color: red;
+  padding: 5%;
 }
 .facebook, .google{
-  margin-left: -25px;
   margin-right: 25px;
 }
 .btn-google:hover, .btn-google:active, .btn-google:focus{

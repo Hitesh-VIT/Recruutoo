@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/css/materialize.min.css">
+    <link rel="stylesheet" href="../static/css/jobdashboard.css">
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/materialize.js"></script>
+    <script src="../static/js/angular.min.js"></script>
+    <script src="../static/js/angular-script.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Dashboard | Recrutoo</title>
+  </head>
+  <body ng-app="app" ng-controller="jobDashboardController">
+    <div class="container">
+      <div class="row">
+        <div class="col s10">
+          <a class='dropdown-button' data-beloworigin="true" data-constrainwidth="false" data-hover="true" href='#' data-activates='dropdown1'><h5 style="color: black">Company Name &#9660;</h5></a>
+          <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="/logout" style="color: blue">Logout</a></li>
+          </ul>
+        </div>
+        <div class="col s2" class="company-logo">
+          <img src="../static/images/Recrutoo.png" class="company-image" style="width: 50%;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <ul class="tabs">
+            <li class="tab col s6"><a href="#jobs" class="active">Jobs</a></li>
+            <li class="tab col s6"><a href="#candidates">Candidates</a></li>
+          </ul>
+        </div>
+        <div id="jobs" class="col s12">
+          <br>
+          <center><button class="btn waves-effect waves-light">Add Job</button></center>
+          <br>
+          <table class="table-responsive">
+            <tr>
+              <th>Job Name</th>
+              <th>Number Of Candidates</th>
+              <th>Hiring Manager</th>
+              <th>Date Created</th>
+              <th>Close and Unpublish</th>
+            </tr>
+            <tr>
+              <td>Job Name</td>
+              <td>Number Of Candidates</td>
+              <td>Hiring Manager</td>
+              <td>Date Created</td>
+              <td><a href="#">Close</a></td>
+            </tr>
+          </table>
+        </div>
+        <div id="candidates" class="col s12">
+          Test 2
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+$(document).ready(function(){
+  $('ul.tabs').tabs();
+  });
+</script>

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-  {% load static %}
-    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
-    <link rel="stylesheet" href='{% static "css/login.css" %}'>
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/materialize.js'%}"></script>
-    <script src="{% static 'js/angular.min.js' %}"></script>
-    <script src="{% static 'js/angular-script.js' %}"></script>
+    <link rel="stylesheet" href="../static/css/materialize.min.css">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/materialize.js"></script>
+    <script src="../static/js/angular.min.js"></script>
+    <script src="../static/js/angular-script.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,12 +16,12 @@
     <div class="container">
       <div class="login" ng-if="login">
         <h1>Log In</h1>
-        <p>New to Us? <a href="#" ng-click="changeLogin(false)">Sign Up</a></p>
+        <p>New to Recrutoo? <a href="#" ng-click="changeLogin(false)">Sign Up</a></p>
         <div class="row">
           <div class="col s12 m6 l6 push-m1 push-l1 login-left">
             <br><br>
-            <form method="POST" action="{% url 'Login' %}">
-             {% csrf_token %}
+            <form method="POST" action="{% url 'Login">
+             <!-- {% csrf_token %} -->
               <div class="input-field">
                 <input id="id_email" type="email" class="validate" name="email">
                 <label for="id_email">Email</label>
@@ -36,14 +35,15 @@
                 <label for="filled-in-box">Remember Me</label>
               </div>
               <div class="input-field col s6 forgot">
-                <a href="{% url 'password_reset' %}">Forgot Password?</a>
+                <a href="{% url 'password_reset">Forgot Password?</a>
               </div>
               <div class="bt"><button class="btn-custom">Log In</button></div>
             </form>
           </div>
           <div class="col s12 m4 l4 push-m1 push-l1 login-right">
             <h1 class="hide-on-med-and-up">OR</h1>
-            <a button class="btn-google" href="{% url 'social:begin' 'google-oauth2' %}"><span class="google"><i class="fa fa-google-plus" style="color: red" aria-hidden="true"></i></span>Continue with Google</a>
+            <span class="hide-on-med-and-down"><br><br><br><br><br><br></span>
+            <a button class="btn-google" href="{% url 'social:begin' 'google-oauth2"><span class="google"><i class="fa fa-google-plus" style="color: red" aria-hidden="true"></i></span>Continue with Google</a>
           </div>
         </div>
       </div>
@@ -53,8 +53,8 @@
         <div class="row">
           <div class="col s12 m6 l6 push-m1 push-l1 login-left">
             <br><br>
-            <form name="registerForm" method="POST" action="{% url 'signup' %}">
-            {% csrf_token %}
+            <form name="registerForm" method="POST" action="{% url 'signup">
+            <!-- {% csrf_token %} -->
               <div class="input-field">
                 <input id="id_email" type="email" class="validate" name="email" required>
                 <label for="id_email">Email</label>
@@ -73,11 +73,12 @@
           </div>
           <div class="col s12 m4 l4 push-m1 push-l1 login-right">
             <h1 class="hide-on-med-and-up">OR</h1>
-            <a button class="btn-google" href="{% url 'social:begin' 'google-oauth2' %}"><span class="google"><i class="fa fa-google-plus" style="color: red" aria-hidden="true"></i></span>Continue with Google</a>
+            <span class="hide-on-med-and-down"><br><br><br><br><br><br></span>
+            <a button class="btn-google" href="{% url 'social:begin' 'google-oauth2"><span class="google"><i class="fa fa-google-plus" style="color: red" aria-hidden="true"></i></span>Continue with Google</a>
           </div>
         </div>
       </div>
     </div>
-    {{ message }}
+    <!-- {{ message }} -->
   </body>
 </html>
