@@ -41,3 +41,7 @@ app.controller('jobListController', function($scope, $http){
 app.controller('singleJobController', function($scope){
 
 });
+
+app.controller('jobApplyController', function($scope){
+
+});

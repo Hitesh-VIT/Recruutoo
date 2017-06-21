@@ -16,7 +16,7 @@
     <div class="container">
       <div class="row">
         <div class="col s10">
-          <a class='dropdown-button' data-beloworigin="true" data-constrainwidth="false" data-hover="true" href='#' data-activates='dropdown1'><h5 style="color: black">Company Name &#9660;</h5></a>
+          <a class='dropdown-button' data-beloworigin="true" data-constrainwidth="false" data-hover="false" href='#' data-activates='dropdown1'><h5 style="color: black">Company Name &#9660;</h5></a>
           <ul id='dropdown1' class='dropdown-content'>
             <li><a href="/logout" style="color: blue">Logout</a></li>
           </ul>
@@ -28,8 +28,8 @@
       <div class="row">
         <div class="col s12">
           <ul class="tabs">
-            <li class="tab col s6"><a href="#jobs" class="active">Jobs</a></li>
-            <li class="tab col s6"><a href="#candidates">Candidates</a></li>
+            <li class="tab col s6"><a href="#jobs">Jobs</a></li>
+            <li class="tab col s6"><a href="#candidates" class="active">Candidates</a></li>
           </ul>
         </div>
         <div id="jobs" class="col s12">
@@ -44,6 +44,7 @@
               <th>Date Created</th>
               <th>Close and Unpublish</th>
             </tr>
+            <!-- TODO: Repeat this row -->
             <tr>
               <td>Job Name</td>
               <td>Number Of Candidates</td>
@@ -54,7 +55,29 @@
           </table>
         </div>
         <div id="candidates" class="col s12">
-          Test 2
+          <br>
+          <center><button class="btn waves-effect waves-light">Add Candidate</button></center>
+          <br>
+          <table class="responsive-table">
+            <tr>
+              <th>Name</th>
+              <th>Job Applied</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Source</th>
+              <th>Resume</th>
+              <th>LinkedIn</th>
+            </tr>
+            <tr>
+              <td>A Person</td>
+              <td>Apple CEO</td>
+              <td>aperson@gmail.com</td>
+              <td>9824288567</td>
+              <td>Inbound</td>
+              <td><a href="#">Download</a></td>
+              <td><a href="http://linkedin.com/patd/to/profile">Visit</a></td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>

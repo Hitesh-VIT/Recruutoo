@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/css/materialize.min.css">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/materialize.js"></script>
+    <script src="../static/js/angular.min.js"></script>
+    <script src="../static/js/angular-script.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Apply for Job | Recrutoo</title>
+  </head>
+  <body ng-app="app" ng-controller="jobApplyController" id="addcandidate">
+    <div class="container">
+      <div class="add-job">
+        <h1>Apply For Job</h1>
+        <div class="row">
+          <div class="col s12">
+            <br><br>
+            <form name="addJobForm" method="POST" action="#">
+            <!-- {% csrf_token %} -->
+              <div class="input-field">
+                <input id="id_name" type="text" class="validate" name="name" required>
+                <label for="id_name">Full Name</label>
+              </div>
+              <div class="input-field">
+                <input id="id_email" type="email" class="validate" name="email" required>
+                <label for="id_email">Email</label>
+              </div>
+              <div class="input-field">
+                <input id="id_mobile" type="number" class="validate" name="mobile" required>
+                <label for="id_mobile">Phone Number</label>
+              </div>
+              <div class="input-field">
+                <input id="id_location" type="text" class="validate" name="location" required>
+                <label for="id_location">Location</label>
+              </div>
+              <div class="file-field input-field">
+                <div class="btn" style="background: #3899ec">
+                  <span>Resume</span>
+                  <input type="file">
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text">
+                </div>
+              </div>
+              <div class="input-field">
+                <p style="font-size: 150%">Job</p>
+                <select id="id_job" name="job">
+                  <option>Job 1</option>
+                  <option>Job 2</option>
+                  <option>Job 3</option>
+                  <option>Job 4</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="input-field">
+                <input id="id_linkedin" type="text" class="validate" name="linkedin">
+                <label for="id_linkedin">LinkedIn URL</label>
+              </div>
+              <center><div class="bt"><button class="btn-custom">Apply</button></div></center>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- {{ message }} -->
+  </body>
+</html>
+<script>
+  $(document).ready(function(){
+    $('select').material_select();
+  })
+</script>

@@ -14,7 +14,7 @@ form{
   padding: 0% 5%;
 }
 
-.btn, .btn:active, .btn:focus{
+.btn, .btn:active, .btn:focus, .btn:hover{
   background: #3899ec;
 }
 
