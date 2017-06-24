@@ -14,6 +14,7 @@ app.controller('loginController', function($scope){
 
 app.controller('detailsController', function($scope){
   $scope.urlRegex = '[-a-zA-Z0-9@:%._\\+~#=]{2,256}\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)';
+  $scope.phoneRegex = "^(\\+\\d{1,3}[- ]?)?\\d{10}$";
 })
 
 app.controller('addJobController', function($scope){
@@ -43,5 +44,6 @@ app.controller('singleJobController', function($scope){
 });
 
 app.controller('jobApplyController', function($scope){
-
+  $scope.phoneRegex = "^(\\+\\d{1,3}[- ]?)?\\d{10}$";
+  $scope.phone = '+910123456789';
 });

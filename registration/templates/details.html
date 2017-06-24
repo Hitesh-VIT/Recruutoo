@@ -39,15 +39,16 @@
           <div class="input-field">
             <input id="id_company_url" name='company_url' type="text" ng-pattern="urlRegex" ng-model="url" ng-class="{valid: detailsForm.company_url.$valid && url.length > 0, invalid: !detailsForm.company_url.$valid}">
             <label for="id_company_url">Company Url</label>
-            <p ng-if="!detailsForm.company_url.$valid" class="red-text" font-size="120%">Invalid URL</p>
+            <p ng-if="!detailsForm.company_url.$valid" class="red-text" style="font-size: 120%;">Invalid URL</p>
           </div>
           <div class="input-field">
             <input id="id_company_email" type="email"  name="company_email">
             <label for="id_company_email">Email</label>
           </div>
           <div class="input-field">
-            <input id="id_company_mobile" type="number"  name="company_mobile">
+            <input id="id_company_mobile" type="text"  name="company_mobile" ng-pattern="phoneRegex" ng-model="phone" ng-class="{valid: detailsForm.company_mobile.$valid && phone.length > 0, invalid: !detailsForm.company_mobile.$valid}">
             <label for="id_company_mobile">Mobile Number</label>
+            <p ng-if="!detailsForm.company_mobile.$valid" class="red-text" style="font-size: 120%!important">Invalid Mobile Number</p>
           </div>
           <div >
             <label for="id_company_logo" class="custom-file">Logo</label>

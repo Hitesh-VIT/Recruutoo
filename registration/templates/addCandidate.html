@@ -30,8 +30,9 @@
                 <label for="id_email">Email</label>
               </div>
               <div class="input-field">
-                <input id="id_mobile" type="number" class="validate" name="mobile" required>
+                <input id="id_mobile" type="text" name="mobile" ng-pattern="phoneRegex" ng-model="phone" ng-class="{valid: addJobForm.mobile.$valid && phone.length > 0, invalid: !addJobForm.mobile.$valid}" required>
                 <label for="id_mobile">Phone Number</label>
+                <p ng-if="!addJobForm.mobile.$valid" class="red-text" style="font-size: 120%!important">Invalid Or Absent Mobile Number</p>
               </div>
               <div class="input-field">
                 <input id="id_location" type="text" class="validate" name="location" required>
