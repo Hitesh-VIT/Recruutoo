@@ -1,3 +1,6 @@
+@media screen and (min-width: 1300px){
+	.hero-content{margin-top: -250px;}
+}
 @media screen and (max-width:1200px){
 	.device{left:20%;top:-36px;}
 	footer li{margin-right:10%;}
