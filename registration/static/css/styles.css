@@ -8,7 +8,7 @@ HTML5 display definitions
 * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
 */
 *{
-  color: black!important;
+  color: #333!important;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
     display: block
@@ -473,13 +473,14 @@ Buttons
     margin: 0 10px 10px 0;
     padding: 20px 50px;
     border-radius: 3px;
-    background-color: #fff;
-    color: #4b98a9;
+    background-color: #3889ec;
+    color: white!important;
     font-size: 16px;
 }
 .use-btn:hover, .use-btn:focus {
-    background-color: #3889ec;
-    color: #fff!important;
+
+    background: white;
+    color: #000!important;
     text-decoration: none;
 }
 .learn-btn, .download-btn {

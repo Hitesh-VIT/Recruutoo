@@ -8,7 +8,7 @@
 		<link href="../static/css/bootstrap.min.css" rel="stylesheet">
 		<link href="../static/css/animate.css" rel="stylesheet">
 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/../static/css/font-awesome.min.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Courgette|Montserrat:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Courgette|Montserrat:400,700|Raleway:800" rel="stylesheet">
 		<link href="../static/css/styles.css" rel="stylesheet">
 		<link href="../static/css/queries.css" rel="stylesheet">
 	</head>
@@ -25,17 +25,17 @@
 							<!-- <p>MENU</p><a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a> -->
 						</div>
 					</div>
-					<div class="row hero-content" style="top: -250px;position: relative;">
+					<div class="row hero-content" style="top: -280px;position: relative;">
 						<div class="col-md-12">
 							<center>
 								<br><br><br><br>
 								<span class="hide-md-up"><br><br><br><br><br></span>
-								<h1 class="animated fadeInDown hidden-sm-down"><span class="corgette">Recrutoo</span><br>The next generation recruitment platform.</h1>
+								<h1 class="animated fadeInDown hidden-sm-down" id="a"><span class="corgette">Recrutoo</span><br><span class="raleway white-text">The Next Generation<br>Recruitment Platform.</span></h1>
 								<h1 class="animated fadeInDown hidden-md-up corgette">Recrutoo</h1>
 								<span class="hidden-md-up"><br><br></span>
-								<p class="animated fadeInDown hidden-md-up" style="font-size: 120%">The next generation recruitment platform.<br><br></p>
-								<p class="animated fadeInDown" style="margin-top: -35px; font-size: 160%"><span style="font-size: 170%;">Create beautiful</span> 'Careers' pages and track applicants.<br>
-								<b style="font-size: 180%">Absolutely Free!</b></p>
+								<p class="animated fadeInDown hidden-md-up" style="font-size: 120%;"><span class="raleway white-text">The Next Generation <br> Recruitment Platform.<br><br></span></p>
+								<p class="animated fadeInDown" style="margin-top: -35px; font-size: 160%;"><span style="font-size: 170%;">Create beautiful</span> 'Careers' pages and track applicants.<br>
+								<b style="font-size: 180%;color: black!important">Absolutely Free!</b></p>
 							<a href="{% url 'initial-signin" class="use-btn animated fadeInUp">Get Started</a>
 						</center>
 						</div>
@@ -66,5 +66,20 @@
 		.hidden-md-up{
 			display: none;
 		}
+	}
+	@media only screen and (min-device-width: 700px) and (max-device-width: 850px){
+		.raleway{
+			font-size: 120%!important;
+		}
+		p{
+			font-size: 120%!important;
+		}
+	}
+	.raleway{
+		font-family: 'Raleway';
+		font-size: 150%;
+	}
+	body{
+		overflow-y: hidden;
 	}
 </style>
