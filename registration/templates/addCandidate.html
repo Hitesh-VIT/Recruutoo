@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Apply for Job | Recrutoo</title>
+		<link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="../static/favicon.ico" type="image/x-icon">
   </head>
   <body ng-app="app" ng-controller="jobApplyController" id="addcandidate">
     <div class="container">
@@ -30,9 +32,9 @@
                 <label for="id_email">Email</label>
               </div>
               <div class="input-field">
-                <input id="id_mobile" type="text" name="mobile" ng-pattern="phoneRegex" ng-model="phone" ng-class="{valid: addJobForm.mobile.$valid && phone.length > 0, invalid: !addJobForm.mobile.$valid}" required>
+                <input id="id_mobile" type="text" name="mobile" ng-pattern="phoneRegex" ng-model="mobile" ng-class="{valid: addJobForm.mobile.$valid && addJobForm.mobile.$viewValue.length > 0, invalid: !addJobForm.mobile.$valid && addJobForm.mobile.$viewValue}" required>
                 <label for="id_mobile">Phone Number</label>
-                <p ng-if="!addJobForm.mobile.$valid" class="red-text" style="font-size: 120%!important">Invalid Or Absent Mobile Number</p>
+                <p ng-if="!addJobForm.mobile.$valid && addJobForm.mobile.$viewValue" class="red-text" style="font-size: 120%!important">Invalid Or Absent Mobile Number</p>
               </div>
               <div class="input-field">
                 <input id="id_location" type="text" class="validate" name="location" required>

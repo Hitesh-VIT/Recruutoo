@@ -36,7 +36,7 @@
           <br>
           <center><button class="btn waves-effect waves-light">Add Job</button></center>
           <br>
-          <table class="table-responsive">
+          <table class="responsive-table">
             <tr>
               <th>Job Name</th>
               <th>Number Of Candidates</th>
@@ -81,8 +81,18 @@
         </div>
       </div>
     </div>
+    <footer style="background: #555;padding: 30px 0;position: fixed;bottom: 0px;width: 100%;">
+			<h4 class="" style="text-align: center;">Got Any Queries?<br>Mail Us at: <br> <a href="mailto:xyz@gmail.com">xyz@gmail.com</a></h4>
+		</footer>
   </body>
 </html>
+<style>
+  @media only screen and (min-device-width: 300px) and (max-device-width: 1000px){
+    footer{
+      position: relative!important;
+    }
+  }
+</style>
 <script>
 $(document).ready(function(){
   $('ul.tabs').tabs();

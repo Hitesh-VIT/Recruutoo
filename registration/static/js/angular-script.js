@@ -45,5 +45,6 @@ app.controller('singleJobController', function($scope){
 
 app.controller('jobApplyController', function($scope){
   $scope.phoneRegex = "^(\\+\\d{1,3}[- ]?)?\\d{10}$";
-  $scope.phone = '+910123456789';
+  $scope.mobile = '';
+  
 });

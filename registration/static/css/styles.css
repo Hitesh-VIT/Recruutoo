@@ -7,7 +7,7 @@ HTML5 display definitions
 /*
 * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
 */
-*{
+p,h1,div, span{
   color: #fff!important;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
@@ -585,11 +585,9 @@ Hero
 .hero {
     position: relative;
     padding: 60px 0 60px 0;
-    min-height: 800px;
+    min-height: 900px;
     background: rgb(40, 70, 102) url('../images/hero-01.jpg') no-repeat center center;
     background-size: cover;
-    /*background-blend-mode: difference;*/
-    /*background-blend-mode: hard-light;*/
     color: #fff;
 }
 .hero h1 {
@@ -952,7 +950,7 @@ Download Now
 Footer
 ========================================================================== */
 footer {
-    padding: 100px 0
+    padding: 30px 0;
 }
 footer p {
     color: #c7cacc;
